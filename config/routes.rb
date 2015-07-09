@@ -1,7 +1,7 @@
 QuickBlog::Application.routes.draw do
-  resources :posts do
-    resources :comments, :only => [:create]
-  end
+	root :to => 'posts#index'
 
-  # root :to => 'welcome#index'
+	resources :posts do
+		resources :comments, :only => [:create]
+	end
 end
